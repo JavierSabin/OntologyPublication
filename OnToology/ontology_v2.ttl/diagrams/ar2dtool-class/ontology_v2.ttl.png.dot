@@ -1,0 +1,17 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "geosparql:Feature" "ont:Address" "ev:EVChargingStation" "ont:Neighbourhood" "esbici:EstacionBicicleta" "ont:District" ; /*classes style*/
+	"geosparql:Feature" -> "ont:Address" [ label = "ont:hasAddress" ];
+	"ont:Address" -> "xsd:string" [ label = "ont:ad_name" ];
+	"esbici:EstacionBicicleta" -> "xsd:integer" [ label = "ont:capacity" ];
+	"ev:EVChargingStation" -> "xsd:string" [ label = "ont:id" ];
+	"owl:Thing" -> "xsd:string" [ label = "ont:name_id" ];
+	"owl:Thing" -> "xsd:integer" [ label = "ont:number_id" ];
+	"ont:Address" -> "xsd:string" [ label = "ont:ad_number" ];
+	"ev:EVChargingStation" -> "xsd:string" [ label = "ont:hasOperator" ];
+	"ont:Neighbourhood" -> "ont:District" [ label = "ont:hasDistrict" ];
+	"geosparql:Feature" -> "ont:Neighbourhood" [ label = "ont:hasNeighbourhood" ];
+	"geosparql:Feature" -> "xsd:string" [ label = "ont:hasLocationType" ];
+
+}
